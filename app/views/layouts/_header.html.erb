@@ -7,15 +7,30 @@
 </head>
 <body>
 
-<h4 class="d-flex justify-content-center">
-	<%= link_to "CHICKE-CHICKE", root_path,style: "color:black; text-decoration: none;", class: "text-center mt-3" %>
-</h4>
-	<h6 class="text-center">
-		Sell your item within 24-hours 
-	</h6>
-	<div class="d-flex justify-content-center">
-		<%= image_tag("chicke.png", class: "logo-small", :alt => "chicke logo ") %>	
+<div class="d-flex justify-content-around">
+	<div>
+		<p class="">
+		<%= link_to 'LOGIN', new_user_session_path, class: "btn m-2"  %>
+		</p>	
 	</div>
+	<div>
+		<h4 class="d-flex justify-content-center">
+		<%= link_to "CHICKE-CHICKE", root_path,style: "color:black; text-decoration: none;", class: "text-center mt-3" %>
+		</h4>
+		<h6 class="text-center">
+			Sell your item within 24-hours 
+		</h6>
+		<div class="d-flex justify-content-center">
+			<%= image_tag("chicke.png", class: "logo-small", :alt => "chicke logo ") %>	
+		</div>
+	</div>
+	<div>
+		<p class="">
+			<%= link_to 'SIGN UP', new_user_registration_path, class: "btn m-2"  %>
+
+		</p>	
+	</div>
+</div>
 
 </body>
 </html>
