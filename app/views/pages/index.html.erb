@@ -6,23 +6,29 @@
 	<title>CHICKE-CHICKE</title>
 </head>
 <body>
-	<h4 class="text-center mt-3">
-		CHICKE-CHICKE
-	</h4>
-	<h6 class="text-center">
-		Sell your item within 24-hours 
-	</h6>
-	<div class="d-flex justify-content-center">
-		<%= image_tag("chicke.png", class: "logo-small", :alt => "chicke logo ") %>	
-	</div>
-	
+<p>
+	<%= link_to "Add New Item", new_item_path, class: "btn btn-danger m-3" %>
+</p>
+
+<div class="container">
+  <h1 class="text-center mt-3">All Items</h1>
+
+  <div class="row mt-4">
+    <% @items.each do |item| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= item.title %></h5>
+            <p class="card-text"><strong>Description:</strong> <%= item.description %></p>
+            <p class="card-text"><strong>Price:</strong> <%= number_to_currency(item.price) %></p>
+            <div class="d-flex justify-content-between">
+            	<%= link_to "View Details", item_path(item), class: "btn btn-primary" %><%= link_to "BID", item_path(item), class: "btn btn-danger" %>	
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 </body>
-</html>
-
-
-<style type="text/css">
-	.logo-small{
-		width:50px;
-	}
-</style>
