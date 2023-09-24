@@ -23,7 +23,9 @@
 	            <p class="card-text"><strong>Description:</strong> <%= item.description %></p>
 	            <p class="card-text"><strong>Price:</strong> <%= number_to_currency(item.price) %></p>
 	            <div class="d-flex justify-content-between">
-	            	<%= link_to "View Details", item_path(item), class: "btn btn-primary" %><%= link_to "BID", item_path(item), class: "btn btn-danger" %>	
+	            	<%= link_to "View Details", item_path(item), class: "btn btn-light" %><%= link_to "BID", item_path(item), class: "btn btn-danger" %>	
+	            	<p>
+
 	            </div>
 	          </div>
 	        </div>
@@ -34,3 +36,16 @@
 </div>
 
 </body>
+
+<!--
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+-->

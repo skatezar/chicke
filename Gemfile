@@ -75,3 +75,5 @@ end
 gem 'bootstrap'
 
 gem "devise"
+
+gem 'jquery-rails'
