@@ -9,9 +9,15 @@
 
 <div class="d-flex justify-content-around">
 	<div>
+		<% if current_user %>
+		<p class="">
+		<i class="fa-regular fa-user m-3" style="font-size:30px;"></i>
+		</p>
+		<% else %>
 		<p class="">
 		<%= link_to 'LOGIN', new_user_session_path, class: "btn m-2"  %>
-		</p>	
+		</p>
+		<% end %>	
 	</div>
 	<div>
 		<h4 class="d-flex justify-content-center">
@@ -25,10 +31,16 @@
 		</div>
 	</div>
 	<div>
+		<% if current_user %>
 		<p class="">
-			<%= link_to 'SIGN UP', new_user_registration_path, class: "btn m-2"  %>
-
-		</p>	
+		<i class="fa-regular fa-user m-3" style="font-size:30px;"></i>
+		</p>
+		<% else %>
+		<p class="">
+		<%= link_to 'SIGN UP', new_user_registration_path, class: "btn m-2"  %>
+		</p>
+		<% end %>	
+			
 	</div>
 </div>
 

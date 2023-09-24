@@ -19,6 +19,9 @@
       <%= f.label :price %>
       <%= f.number_field :price, class: "form-control" %>
     </div>
+      <!-- Add a hidden field to set the user_id -->
+      <%= f.hidden_field :user_id, value: current_user.id %>
+
 
     <div class="form-actions">
       <%= f.submit 'Create Item', class: "btn btn-primary" %>
